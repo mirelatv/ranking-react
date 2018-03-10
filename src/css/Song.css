@@ -1,0 +1,4 @@
+.song-item:hover {
+  background-color: #acacac;
+  cursor: pointer;
+}
