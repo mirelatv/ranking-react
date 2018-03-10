@@ -56,7 +56,7 @@ State: {
   },
   {
     type: 'DOWN_VOTE',
-    id:2
+    id: 2
   },
   {
     type: 'NEXT'
