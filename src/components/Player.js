@@ -1,23 +1,22 @@
-import React, { Component } from 'react';
-import SongsList from './SongsList';
+import React, { Component } from 'react'
+import Slide from './Slide'
 
 class Player extends Component {
-  constructor() {
-    super()
-    this.state = {
-      songs: [
-        {id: 1, name: 'Canción 1', votes: 25},
-        {id: 2, name: 'Canción 2', votes: 15},
-        {id: 3, name: 'Canción 3', votes: 10},
-        {id: 4, name: 'Canción 4', votes: 3},
-        {id: 5, name: 'Canción 5', votes: 1}
-      ]
-    }
-  }
-
   render() {
     return (
-      <SongsList songs={this.state.songs} />
+      <div id="carouselRanking" className="carousel slide" data-ride="carousel" data-interval="false">
+        <Slide songs={this.props.songs} actualId={this.props.actualId}/>
+
+        <a className="carousel-control-prev" href="#carouselRanking" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+
+        <a className="carousel-control-next" href="#carouselRanking" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
+    </div>
     )
   }
 }
